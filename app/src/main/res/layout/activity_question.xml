@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuestionActivity">
+
+    <!-- SCORE CARDVIEW  -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/score_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#000000"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp">
+
+        <LinearLayout
+            android:id="@+id/score_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- QUESTION NUMBER TEXTVIEW  -->
+
+            <TextView
+                android:id="@+id/totalQuestions_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:text="1 /10"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/quiz_type_imageview"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/basic"
+                android:scaleType="centerInside"
+                />
+            <TextView
+                android:id="@+id/score_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAlignment="textEnd"
+                android:layout_gravity="end"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/middle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/submit_cardview"
+        android:layout_below="@id/score_cardview"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+
+        <!-- QUESTIONS CARDVIEW  -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/questions_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#000000"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp"
+            app:contentPadding="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            >
+
+            <!-- QUESTION TEXTVIEW -->
+            <TextView
+                android:id="@+id/questions_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="Questions"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
+
+        </android.support.v7.widget.CardView>
+
+        <!-- ANSWERS CARDVIEW  -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/answers_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#000000"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp"
+            app:contentPadding="2dp"
+            android:layout_weight="1.5"
+            >
+
+            <!-- ANSWERS BUTTON -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer1_Radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="2dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Answer 1"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/answer2_Radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="2dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Answer 2"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/answer3_Radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="2dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Answer 3"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/answer4_Radio"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="2dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Answer 4"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        />
+
+                </RadioGroup>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+    <!-- SUBMIT BUTTON CARDVIEW -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/submit_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="#8BC34A"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:contentPadding="2dp">
+
+        <!-- SUBMIT BUTTON  -->
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8BC34A"
+            android:onClick="submitButton"
+            android:text="SUBMIT"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
